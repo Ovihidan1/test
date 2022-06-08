@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      /*  System.out.println("Hello");
+
+        Scanner sc = new Scanner(System.in);
+        int nr = sc.nextInt();
+        if (nr % 3 == 0 && nr % 5 == 0) {
+            System.out.println("fizzbuzz");
+        } else if (nr % 5 == 0) {
+
+            System.out.println("buzz");
+        } else if (nr % 3 == 0) {
+            System.out.println("fizz");
+        } else {
+            System.out.println("numar indivizibil");
+
+        }
+        int num = 12321, reversedNum = 0, remainder;
+
+        int originalNum = num;
+
+
+        while (num != 0) {
+            remainder = num % 10;
+            reversedNum = reversedNum * 10 + remainder;
+            num /= 10;
+        }
+
+
+        if (originalNum == reversedNum) {
+            System.out.println(originalNum + " numarul este palindrom.");
+        } else {
+            System.out.println(originalNum + " numarul mu este palindrom.");
+        }
+        String stringA ="abc";
+        System.out.println("String A:" + stringA);
+        String stringB ="def";
+        System.out.println("String B :" + stringB);
+        System.out.println("Prima linie :" + " " + (stringA.length()+stringB.length()));
+        System.out.println(("A doua linie:" + " " + stringA.compareTo(stringB)));
+        String output = stringA.substring(0,1).toUpperCase() + stringA.substring(1) + " " + stringB.substring(0,1).toUpperCase() + stringB.substring(1);
+        System.out.println("A treia linie:" + output);*/
+        System.out.println(lastTwo("coding"));
+        System.out.println(lastTwo("cat"));
+        System.out.println(lastTwo("ab"));
+        System.out.println(lastTwo("a"));
+    }
+
+    public static String lastTwo(String str) {
+
+        int strLength = str.length();
+        if(strLength<2)
+            return str;
+
+        String last = str.substring(strLength-1,strLength);
+        String bLast = str.substring(strLength-2,strLength-1);
+        return str.substring(0, strLength-2)+last+bLast;
+    }
+
+
+}
